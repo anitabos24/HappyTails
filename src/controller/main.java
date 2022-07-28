@@ -15,7 +15,7 @@ public class main {
         Uitlaten uitlaten = new Uitlaten(hond);
         Borstelen borstelen = new Borstelen(hond);
         Wassen wassen = new Wassen(hond);
-        
+
 
         Werknemer werknemer = new Werknemer();
         werknemer.voegBehandelingToe(borstelen);
