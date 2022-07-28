@@ -22,13 +22,14 @@ public class main {
 
 
         Behandeling gekozenbehandeling = null;
-        int keuze = 4;
-        while (keuze > 3 || keuze < 1) {
-        System.out.println("Welke behandeling wil je door ons laten uitvoeren?");
-        System.out.println("1. Uitlaten");
-        System.out.println("2. Wassen");
-        System.out.println("3. Borstelen");
-        keuze = keyboard.nextInt();
+        int keuze = 5;
+        while (keuze > 4 || keuze < 1) {
+            System.out.println("Welke behandeling wil je door ons laten uitvoeren?");
+            System.out.println("1. Uitlaten");
+            System.out.println("2. Wassen");
+            System.out.println("3. Borstelen");
+            System.out.println("4. Spelen");
+            keuze = keyboard.nextInt();
             switch (keuze) {
                 case 1:
                     gekozenbehandeling = new Uitlaten(hond);
@@ -38,6 +39,9 @@ public class main {
                     break;
                 case 3:
                     gekozenbehandeling = new Borstelen(hond);
+                    break;
+                case 4:
+                    gekozenbehandeling = new Spelen(hond);
                     break;
                 default:
                     System.out.println("ongeldige keuze, probeer het opnieuw: ");
@@ -49,7 +53,6 @@ public class main {
 
 
         werknemer.voerAlleBehandelingenUit();
-
 
 
     }
